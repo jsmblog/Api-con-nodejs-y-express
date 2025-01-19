@@ -38,8 +38,8 @@ export const User = sequelize.define('User', {
 },{
     timestamps: false,
     hooks:{
-        beforeCreate : async (user) => {
-            user.password = await bcrypt.hash(user.password, 10);
+        beforeCreate : (user) => {
+            user.password = bcrypt.hashSync(user.password, 10);
         }
     }
 });
