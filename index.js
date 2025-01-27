@@ -2,6 +2,7 @@ import express from 'express';
 import {PORT} from './src/CONFIG/config.js';
 import userRouter from './src/ROUTER/user_router.js';
 import { sequelize } from './src/DB/db_conexion.js';
+import './src/RELATIONS/user_customer_category.js'
 import cors from 'cors'
 const CURRENT_PORT  = PORT || 3000;
 const app = express();
